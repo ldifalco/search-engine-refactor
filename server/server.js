@@ -27,7 +27,10 @@ async function runApolloServer() {
     app.use(express.static(path.join(__dirname, '../client/build')));
   }
 
-
+  app.get('/', (req, res) => {
+    console.log('hello')
+    });
+    
   db.once('open', () => {
     app.listen(PORT, () => {
       console.log(`🌍 Now listening on localhost:${PORT}`);
