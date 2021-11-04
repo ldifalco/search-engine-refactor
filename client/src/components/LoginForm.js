@@ -6,7 +6,7 @@ import { loginUser } from '../utils/API';
 import Auth from '../utils/auth';
 
 import {gql, useMutation} from '@apollo/client';
-import {LOGIN_USER} from '../utils/mutation.js';
+import {LOGIN_USER} from '../utils/mutations';
 
 const LoginForm = () => {
   const [userFormData, setUserFormData] = useState({ email: '', password: '' });
